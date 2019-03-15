@@ -87,7 +87,7 @@ export default {
     alignRight () {
       const navCount = (this.$site.themeConfig.nav || []).length
       const repo = this.$site.repo ? 1 : 0
-      return navCount + repo <= 2
+      return navCount + repo <= 3
     }
   },
   methods: {
@@ -153,23 +153,21 @@ $border-radius = 10px
     cursor pointer
     outline none
     background #000 url('~/search.svg') no-repeat 8px center
-    border solid 1px #000
+    border 1px solid #000
     padding 9px
-    border-radius $border-radius
+    border-radius 29px
     transition all .5s
     font-size: 12px
     &::-webkit-search-decoration,
     &::-webkit-search-cancel-button
       display none
     &:focus
-      /* width 130px */
       width 11em
       padding-left 32px
       color #fff
       background-color #000
       border-color #f1003e
       cursor auto
-      /* box-shadow 0 0 5px rgba(109,207,246,.5) */
   .suggestions
     background #000
     width 25rem
@@ -207,6 +205,7 @@ $border-radius = 10px
   .search-box
     margin-right 0
     .suggestions
+      max-width 16em
       right 0
 
 @media (max-width: $MQMobileNarrow)

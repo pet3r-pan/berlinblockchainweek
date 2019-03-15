@@ -78,6 +78,7 @@ export default {
     margin 0px auto
   &_main
     background url('~/main-bg.jpg')
+    background-attachment fixed
     background-size cover
     background-position left bottom
     background-repeat no-repeat
@@ -100,6 +101,7 @@ export default {
       margin 0 0 38px 0
   &_features
     background url('~/features-bg.jpg')
+    background-attachment fixed
     background-size cover
     background-position left top
     background-repeat no-repeat
@@ -107,14 +109,16 @@ export default {
     .home-wrap
       padding 80px 1.5rem 55px
   .hero
+    background none
     text-align center
     img
       max-height 280px
       display block
       margin 3rem auto 1.5rem
     h1
+      margin-top 0
       font-size 48px
-    h1, .description
+    .description
       margin 15px auto
     .action
       margin 30px auto
@@ -226,8 +230,9 @@ export default {
         margin 2rem auto 1.2rem
       h1
         font-size 2rem
-      h1, .description, .action
-        margin 1.2rem auto
+        margin  0 1.2rem 2rem
+      .description, .action
+        margin 0.2rem auto 0.8rem 
       .description
         font-size 1.2rem
       .action-button
